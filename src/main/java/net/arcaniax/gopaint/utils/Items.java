@@ -18,6 +18,7 @@
  */
 package net.arcaniax.gopaint.utils;
 
+import com.cryptomorin.xseries.XMaterial;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import org.bukkit.Material;
@@ -30,9 +31,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Items {
+public final class Items {
 
-    public Items() {
+    Items() {
+    }
+
+    private static final Boolean NEWER_VERSION;
+    static {
+        NEWER_VERSION = Material.getMaterial("SKULL_ITEM") == null;
     }
 
     public ItemStack create(Material mat, short data, int amount, String name, String lore) {
@@ -57,7 +63,7 @@ public class Items {
 
     public ItemStack createHead(String data, int amount, String name, String lore) {
         ItemStack item;
-        if (XMaterial.isNewVersion()) {
+        if (NEWER_VERSION) {
             item = XMaterial.PLAYER_HEAD.parseItem();
         } else {
             item = new ItemStack(Material.getMaterial("SKULL_ITEM"));

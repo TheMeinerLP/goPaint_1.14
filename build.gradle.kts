@@ -53,6 +53,8 @@ dependencies {
     compileOnlyApi("io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
     compileOnly("com.mojang:authlib:1.5.25")
     compileOnlyApi("com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit")
+    compileOnlyApi("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
+    implementation("com.github.cryptomorin:XSeries:9.9.0")
     implementation("dev.notmyfault.serverlib:ServerLib")
     implementation("org.bstats:bstats-bukkit:3.0.2")
     implementation("org.bstats:bstats-base:3.0.2")
@@ -116,6 +118,7 @@ tasks.named<ShadowJar>("shadowJar") {
         relocate("io.papermc.lib", "net.arcaniax.gopaint.paperlib") {
             include(dependency("io.papermc:paperlib:1.0.8"))
         }
+        relocate("com.cryptomorin.xseries", "net.arcaniax.gopaint.xseries")
     }
     minimize()
 }

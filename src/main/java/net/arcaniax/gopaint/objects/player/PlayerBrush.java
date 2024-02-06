@@ -18,6 +18,7 @@
  */
 package net.arcaniax.gopaint.objects.player;
 
+import com.cryptomorin.xseries.XMaterial;
 import net.arcaniax.gopaint.GoPaintPlugin;
 import net.arcaniax.gopaint.objects.brush.AngleBrush;
 import net.arcaniax.gopaint.objects.brush.Brush;
@@ -29,7 +30,6 @@ import net.arcaniax.gopaint.objects.brush.SplatterBrush;
 import net.arcaniax.gopaint.objects.brush.SprayBrush;
 import net.arcaniax.gopaint.objects.other.BlockType;
 import net.arcaniax.gopaint.utils.GUI;
-import net.arcaniax.gopaint.utils.XMaterial;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;

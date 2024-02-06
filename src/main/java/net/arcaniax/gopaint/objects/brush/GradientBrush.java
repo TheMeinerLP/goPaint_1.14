@@ -26,7 +26,7 @@ import net.arcaniax.gopaint.objects.player.ExportedPlayerBrush;
 import net.arcaniax.gopaint.objects.player.PlayerBrush;
 import net.arcaniax.gopaint.utils.Sphere;
 import net.arcaniax.gopaint.utils.Surface;
-import net.arcaniax.gopaint.utils.XMaterial;
+import net.arcaniax.gopaint.utils.VersionCheck;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -55,7 +55,7 @@ public class GradientBrush extends Brush {
             if ((!pb.isSurfaceModeEnabled()) || Surface.isOnSurface(b.getLocation(), p.getLocation())) {
                 if ((!pb.isMaskEnabled()) || (b.getType().equals(pb
                         .getMask()
-                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == pb.getMask().getData()))) {
+                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == pb.getMask().getData()))) {
                     double _y = (b.getLocation().getBlockY() - y) / (double) size * pbBlocks.size();
                     Random r = new Random();
                     int block = (int) (_y + (r.nextDouble() * 2 - 1) * ((double) mixing / 100.0));
@@ -106,7 +106,7 @@ public class GradientBrush extends Brush {
             if ((!epb.isSurfaceModeEnabled()) || Surface.isOnSurface(b.getLocation(), p.getLocation())) {
                 if ((!epb.isMaskEnabled()) || (b.getType().equals(epb
                         .getMask()
-                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == epb.getMask().getData()))) {
+                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == epb.getMask().getData()))) {
                     double _y = (b.getLocation().getBlockY() - y) / (double) size * epbBlocks.size();
                     Random r = new Random();
                     int block = (int) (_y + (r.nextDouble() * 2 - 1) * ((double) mixing / 100.0));

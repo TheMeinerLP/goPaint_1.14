@@ -18,6 +18,9 @@
  */
 package net.arcaniax.gopaint.utils;
 
+import com.cryptomorin.xseries.XMaterial;
+import com.sk89q.worldedit.bukkit.BukkitAdapter;
+import com.sk89q.worldedit.world.item.ItemTypes;
 import net.arcaniax.gopaint.GoPaintPlugin;
 import net.arcaniax.gopaint.objects.brush.AngleBrush;
 import net.arcaniax.gopaint.objects.brush.Brush;
@@ -63,8 +66,9 @@ public class GUI {
         for (int x = 0; x < 27; x++) {
             inv.setItem(
                     x,
-                    item.create(XMaterial.GRAY_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.GRAY_STAINED_GLASS_PANE.data,
+                    item.create(
+                            XMaterial.GRAY_STAINED_GLASS_PANE.parseMaterial(),
+                            (short) XMaterial.GRAY_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -170,7 +174,7 @@ public class GUI {
             inv.setItem(
                     x,
                     item.create(XMaterial.GRAY_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.GRAY_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.GRAY_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -183,7 +187,7 @@ public class GUI {
             inv.setItem(
                     1,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -201,7 +205,7 @@ public class GUI {
             inv.setItem(
                     19,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -211,7 +215,7 @@ public class GUI {
             inv.setItem(
                     1,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -229,7 +233,7 @@ public class GUI {
             inv.setItem(
                     19,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -241,7 +245,7 @@ public class GUI {
         inv.setItem(
                 2,
                 item.create(XMaterial.ORANGE_STAINED_GLASS_PANE.parseMaterial(),
-                        (short) XMaterial.ORANGE_STAINED_GLASS_PANE.data,
+                        (short) XMaterial.ORANGE_STAINED_GLASS_PANE.getData(),
                         1,
                         "&7",
                         ""
@@ -344,7 +348,7 @@ public class GUI {
         inv.setItem(
                 20,
                 item.create(XMaterial.ORANGE_STAINED_GLASS_PANE.parseMaterial(),
-                        (short) XMaterial.ORANGE_STAINED_GLASS_PANE.data,
+                        (short) XMaterial.ORANGE_STAINED_GLASS_PANE.getData(),
                         1,
                         "&7",
                         ""
@@ -356,7 +360,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -374,7 +378,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -387,7 +391,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -405,7 +409,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -419,7 +423,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -437,7 +441,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -450,7 +454,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -468,7 +472,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -478,7 +482,7 @@ public class GUI {
             inv.setItem(
                     4,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -496,7 +500,7 @@ public class GUI {
             inv.setItem(
                     22,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -509,7 +513,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -527,7 +531,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -540,7 +544,7 @@ public class GUI {
             inv.setItem(
                     4,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -558,7 +562,7 @@ public class GUI {
             inv.setItem(
                     22,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -570,7 +574,7 @@ public class GUI {
             inv.setItem(
                     3,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -588,7 +592,7 @@ public class GUI {
             inv.setItem(
                     21,
                     item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -601,7 +605,7 @@ public class GUI {
         inv.setItem(
                 5,
                 item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                        (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                        (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                         1,
                         "&7",
                         ""
@@ -619,7 +623,7 @@ public class GUI {
         inv.setItem(
                 23,
                 item.create(XMaterial.WHITE_STAINED_GLASS_PANE.parseMaterial(),
-                        (short) XMaterial.WHITE_STAINED_GLASS_PANE.data,
+                        (short) XMaterial.WHITE_STAINED_GLASS_PANE.getData(),
                         1,
                         "&7",
                         ""
@@ -631,7 +635,7 @@ public class GUI {
             inv.setItem(
                     6,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -649,7 +653,7 @@ public class GUI {
             inv.setItem(
                     24,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -659,7 +663,7 @@ public class GUI {
             inv.setItem(
                     6,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -672,7 +676,7 @@ public class GUI {
             inv.setItem(
                     24,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -685,7 +689,7 @@ public class GUI {
             inv.setItem(
                     7,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -703,7 +707,7 @@ public class GUI {
             inv.setItem(
                     25,
                     item.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.LIME_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.LIME_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -713,7 +717,7 @@ public class GUI {
             inv.setItem(
                     7,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -731,7 +735,7 @@ public class GUI {
             inv.setItem(
                     25,
                     item.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.RED_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.RED_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -744,7 +748,7 @@ public class GUI {
             inv.setItem(
                     x,
                     item.create(XMaterial.YELLOW_STAINED_GLASS_PANE.parseMaterial(),
-                            (short) XMaterial.YELLOW_STAINED_GLASS_PANE.data,
+                            (short) XMaterial.YELLOW_STAINED_GLASS_PANE.getData(),
                             1,
                             "&7",
                             ""
@@ -791,7 +795,7 @@ public class GUI {
         inv.setItem(
                 43,
                 item.create(XMaterial.YELLOW_STAINED_GLASS_PANE.parseMaterial(),
-                        (short) XMaterial.YELLOW_STAINED_GLASS_PANE.data,
+                        (short) XMaterial.YELLOW_STAINED_GLASS_PANE.getData(),
                         1,
                         "&7",
                         ""

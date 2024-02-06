@@ -18,6 +18,7 @@
  */
 package net.arcaniax.gopaint.objects.brush;
 
+import com.cryptomorin.xseries.XMaterial;
 import net.arcaniax.gopaint.GoPaintPlugin;
 import net.arcaniax.gopaint.objects.other.BlockPlace;
 import net.arcaniax.gopaint.objects.other.BlockPlacer;
@@ -27,7 +28,7 @@ import net.arcaniax.gopaint.objects.player.PlayerBrush;
 import net.arcaniax.gopaint.utils.BlockUtils;
 import net.arcaniax.gopaint.utils.Sphere;
 import net.arcaniax.gopaint.utils.Surface;
-import net.arcaniax.gopaint.utils.XMaterial;
+import net.arcaniax.gopaint.utils.VersionCheck;
 import net.arcaniax.gopaint.utils.curve.BezierSpline;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -105,7 +106,7 @@ public class PaintBrush extends Brush {
                             if ((!pb.isSurfaceModeEnabled()) || Surface.isOnSurface(location, p.getLocation())) {
                                 if ((!pb.isMaskEnabled()) || (b.getType().equals(pb
                                         .getMask()
-                                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == pb.getMask().getData()))) {
+                                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == pb.getMask().getData()))) {
                                     placedBlocks.add(new BlockPlace(
                                             location,
                                             new BlockType(pbBlocks.get(random).getMaterial(), pbBlocks.get(random).getData())
@@ -184,7 +185,7 @@ public class PaintBrush extends Brush {
                             if ((!epb.isSurfaceModeEnabled()) || Surface.isOnSurface(location, p.getLocation())) {
                                 if ((!epb.isMaskEnabled()) || (b.getType().equals(epb
                                         .getMask()
-                                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == epb
+                                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == epb
                                         .getMask()
                                         .getData()))) {
                                     placedBlocks.add(new BlockPlace(

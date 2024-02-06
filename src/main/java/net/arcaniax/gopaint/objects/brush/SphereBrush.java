@@ -26,7 +26,7 @@ import net.arcaniax.gopaint.objects.player.ExportedPlayerBrush;
 import net.arcaniax.gopaint.objects.player.PlayerBrush;
 import net.arcaniax.gopaint.utils.Sphere;
 import net.arcaniax.gopaint.utils.Surface;
-import net.arcaniax.gopaint.utils.XMaterial;
+import net.arcaniax.gopaint.utils.VersionCheck;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -52,7 +52,7 @@ public class SphereBrush extends Brush {
             if ((!pb.isSurfaceModeEnabled()) || Surface.isOnSurface(b.getLocation(), p.getLocation())) {
                 if ((!pb.isMaskEnabled()) || (b.getType().equals(pb
                         .getMask()
-                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == pb.getMask().getData()))) {
+                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == pb.getMask().getData()))) {
                     Random r = new Random();
                     int random = r.nextInt(pbBlocks.size());
                     placedBlocks.add(
@@ -87,7 +87,7 @@ public class SphereBrush extends Brush {
             if ((!epb.isSurfaceModeEnabled()) || Surface.isOnSurface(b.getLocation(), p.getLocation())) {
                 if ((!epb.isMaskEnabled()) || (b.getType().equals(epb
                         .getMask()
-                        .getMaterial()) && (XMaterial.isNewVersion() || b.getData() == epb.getMask().getData()))) {
+                        .getMaterial()) && (VersionCheck.isNewerVersion() || b.getData() == epb.getMask().getData()))) {
                     Random r = new Random();
                     int random = r.nextInt(epbBlocks.size());
                     placedBlocks.add(

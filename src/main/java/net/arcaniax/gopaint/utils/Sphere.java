@@ -18,6 +18,7 @@
  */
 package net.arcaniax.gopaint.utils;
 
+import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 

@@ -18,6 +18,7 @@
  */
 package net.arcaniax.gopaint.listeners;
 
+import com.cryptomorin.xseries.XMaterial;
 import net.arcaniax.gopaint.GoPaintPlugin;
 import net.arcaniax.gopaint.objects.brush.AngleBrush;
 import net.arcaniax.gopaint.objects.brush.Brush;
@@ -32,7 +33,7 @@ import net.arcaniax.gopaint.objects.other.BlockType;
 import net.arcaniax.gopaint.objects.player.PlayerBrush;
 import net.arcaniax.gopaint.utils.DisabledBlocks;
 import net.arcaniax.gopaint.utils.GUI;
-import net.arcaniax.gopaint.utils.XMaterial;
+import net.arcaniax.gopaint.utils.VersionCheck;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -212,7 +213,7 @@ public class InventoryListener implements Listener {
             }
             PlayerBrush pb = GoPaintPlugin.getBrushManager().getPlayerBrush(p);
             boolean check = false;
-            if (XMaterial.isNewVersion()) {
+            if (VersionCheck.isNewerVersion()) {
                 if (e.getCurrentItem().getType().equals(XMaterial.PLAYER_HEAD.parseMaterial())) {
                     check = true;
                 }
